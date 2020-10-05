@@ -1,0 +1,1193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2" level="2" version="1">
+<model id="automatically_created" name="created by /home/mit/csb/biosys/share/bin/rea2sbml from file marsday.rea">
+ <listOfCompartments>
+  <compartment id="C1" name="dummy"/>
+ </listOfCompartments>
+ <listOfSpecies>
+  <species id="S1" name="hv" compartment="C1" initialAmount="1"/>
+  <species id="S2" name="M" compartment="C1" initialAmount="1"/>
+  <species id="S3" name="e" compartment="C1" initialAmount="1"/>
+  <species id="S4" name="O_3" compartment="C1" initialAmount="1"/>
+  <species id="S5" name="O_2" compartment="C1" initialAmount="1"/>
+  <species id="S6" name="O" compartment="C1" initialAmount="1"/>
+  <species id="S7" name="O(^1D)" compartment="C1" initialAmount="1"/>
+  <species id="S8" name="H_2" compartment="C1" initialAmount="1"/>
+  <species id="S9" name="H" compartment="C1" initialAmount="1"/>
+  <species id="S10" name="OH" compartment="C1" initialAmount="1"/>
+  <species id="S11" name="HO_2" compartment="C1" initialAmount="1"/>
+  <species id="S12" name="H_2O" compartment="C1" initialAmount="1"/>
+  <species id="S13" name="H_2O_2" compartment="C1" initialAmount="1"/>
+  <species id="S14" name="CO_2" compartment="C1" initialAmount="1"/>
+  <species id="S15" name="CO" compartment="C1" initialAmount="1"/>
+  <species id="S16" name="N_2" compartment="C1" initialAmount="1"/>
+  <species id="S17" name="N" compartment="C1" initialAmount="1"/>
+  <species id="S18" name="N(^2D)" compartment="C1" initialAmount="1"/>
+  <species id="S19" name="NO" compartment="C1" initialAmount="1"/>
+  <species id="S20" name="NO_2" compartment="C1" initialAmount="1"/>
+  <species id="S21" name="NO_3" compartment="C1" initialAmount="1"/>
+  <species id="S22" name="N_2O" compartment="C1" initialAmount="1"/>
+  <species id="S23" name="N_2O_5" compartment="C1" initialAmount="1"/>
+  <species id="S24" name="HNO_2" compartment="C1" initialAmount="1"/>
+  <species id="S25" name="HNO_3" compartment="C1" initialAmount="1"/>
+  <species id="S26" name="HO_2NO_2" compartment="C1" initialAmount="1"/>
+  <species id="S27" name="O^+" compartment="C1" initialAmount="1"/>
+  <species id="S28" name="O_2^+" compartment="C1" initialAmount="1"/>
+  <species id="S29" name="CO_2^+" compartment="C1" initialAmount="1"/>
+  <species id="S30" name="CO_2H^+" compartment="C1" initialAmount="1"/>
+  <species id="S31" name="(HO_2)_grain" compartment="C1" initialAmount="1"/>
+  <species id="S32" name="grain" compartment="C1" initialAmount="1"/>
+ </listOfSpecies>
+ <listOfReactions>
+  <reaction id="R105" reversible="false">
+           <!-- -> 1 hv  -->
+   <listOfProducts>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R104" reversible="false">
+           <!-- 1 hv 1 O_2 -> 2 O  -->
+   <listOfReactants>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S6" stoichiometry="2"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R103" reversible="false">
+           <!-- 1 hv 1 O_2 -> 1 O 1 O(^1D)  -->
+   <listOfReactants>
+    <speciesReference species="S1" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S7" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R102" reversible="false">
+           <!-- 1 hv 1 O_3 -> 1 O_2 1 O  -->
+   <listOfReactants>
+    <speciesReference species="S4" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R101" reversible="false">
+           <!-- 1 hv 1 O_3 -> 1 O_2 1 O(^1D)  -->
+   <listOfReactants>
+    <speciesReference species="S1" stoichiometry="1"/>
+    <speciesReference species="S4" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S7" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R100" reversible="false">
+           <!-- 1 hv 1 O_3 -> 3 O  -->
+   <listOfReactants>
+    <speciesReference species="S1" stoichiometry="1"/>
+    <speciesReference species="S4" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S6" stoichiometry="3"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R99" reversible="false">
+           <!-- 1 hv 1 H_2 -> 2 H  -->
+   <listOfReactants>
+    <speciesReference species="S8" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S9" stoichiometry="2"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R98" reversible="false">
+           <!-- 1 hv 1 OH -> 1 O 1 H  -->
+   <listOfReactants>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S9" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R97" reversible="false">
+           <!-- 1 hv 1 HO_2 -> 1 O 1 OH  -->
+   <listOfReactants>
+    <speciesReference species="S11" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R96" reversible="false">
+           <!-- 1 hv 1 H_2O -> 1 H 1 OH  -->
+   <listOfReactants>
+    <speciesReference species="S12" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S9" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R95" reversible="false">
+           <!-- 1 hv 1 H_2O -> 1 O(^1D) 1 H_2  -->
+   <listOfReactants>
+    <speciesReference species="S1" stoichiometry="1"/>
+    <speciesReference species="S12" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S8" stoichiometry="1"/>
+    <speciesReference species="S7" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R94" reversible="false">
+           <!-- 1 hv 1 H_2O -> 1 O 2 H  -->
+   <listOfReactants>
+    <speciesReference species="S1" stoichiometry="1"/>
+    <speciesReference species="S12" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S9" stoichiometry="2"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R93" reversible="false">
+           <!-- 1 hv 1 H_2O_2 -> 2 OH  -->
+   <listOfReactants>
+    <speciesReference species="S13" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S10" stoichiometry="2"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R92" reversible="false">
+           <!-- 1 hv 1 CO_2 -> 1 O 1 CO  -->
+   <listOfReactants>
+    <speciesReference species="S1" stoichiometry="1"/>
+    <speciesReference species="S14" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S15" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R91" reversible="false">
+           <!-- 1 hv 1 CO_2 -> 1 O(^1D) 1 CO  -->
+   <listOfReactants>
+    <speciesReference species="S1" stoichiometry="1"/>
+    <speciesReference species="S14" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S7" stoichiometry="1"/>
+    <speciesReference species="S15" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R90" reversible="false">
+           <!-- 1 M 2 O -> 1 M 1 O_2  -->
+   <listOfReactants>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="2"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R89" reversible="false">
+           <!-- 1 O_2 1 O 1 N_2 -> 1 O_3 1 N_2  -->
+   <listOfReactants>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S16" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S4" stoichiometry="1"/>
+    <speciesReference species="S16" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R88" reversible="false">
+           <!-- 1 O_2 1 O 1 CO_2 -> 1 O_3 1 CO_2  -->
+   <listOfReactants>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S14" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S14" stoichiometry="1"/>
+    <speciesReference species="S4" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R87" reversible="false">
+           <!-- 1 O_3 1 O -> 2 O_2  -->
+   <listOfReactants>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S4" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="2"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R86" reversible="false">
+           <!-- 1 M 1 O 1 CO -> 1 M 1 CO_2  -->
+   <listOfReactants>
+    <speciesReference species="S15" stoichiometry="1"/>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S14" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R85" reversible="false">
+           <!-- 1 O_2 1 O(^1D) -> 1 O_2 1 O  -->
+   <listOfReactants>
+    <speciesReference species="S7" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R84" reversible="false">
+           <!-- 1 O_3 1 O(^1D) -> 2 O_2  -->
+   <listOfReactants>
+    <speciesReference species="S7" stoichiometry="1"/>
+    <speciesReference species="S4" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="2"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R83" reversible="false">
+           <!-- 1 O_3 1 O(^1D) -> 1 O_2 2 O  -->
+   <listOfReactants>
+    <speciesReference species="S4" stoichiometry="1"/>
+    <speciesReference species="S7" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="2"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R82" reversible="false">
+           <!-- 1 O(^1D) 1 H_2 -> 1 H 1 OH  -->
+   <listOfReactants>
+    <speciesReference species="S7" stoichiometry="1"/>
+    <speciesReference species="S8" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S9" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R81" reversible="false">
+           <!-- 1 O(^1D) 1 CO_2 -> 1 O 1 CO_2  -->
+   <listOfReactants>
+    <speciesReference species="S14" stoichiometry="1"/>
+    <speciesReference species="S7" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S14" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R80" reversible="false">
+           <!-- 1 O(^1D) 1 H_2O -> 2 OH  -->
+   <listOfReactants>
+    <speciesReference species="S7" stoichiometry="1"/>
+    <speciesReference species="S12" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S10" stoichiometry="2"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R79" reversible="false">
+           <!-- 1 M 2 H -> 1 M 1 H_2  -->
+   <listOfReactants>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S9" stoichiometry="2"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S8" stoichiometry="1"/>
+    <speciesReference species="S2" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R78" reversible="false">
+           <!-- 1 M 1 O_2 1 H -> 1 M 1 HO_2  -->
+   <listOfReactants>
+    <speciesReference species="S9" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S2" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S11" stoichiometry="1"/>
+    <speciesReference species="S2" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R77" reversible="false">
+           <!-- 1 O_3 1 H -> 1 O_2 1 OH  -->
+   <listOfReactants>
+    <speciesReference species="S4" stoichiometry="1"/>
+    <speciesReference species="S9" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R76" reversible="false">
+           <!-- 1 H 1 HO_2 -> 2 OH  -->
+   <listOfReactants>
+    <speciesReference species="S11" stoichiometry="1"/>
+    <speciesReference species="S9" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S10" stoichiometry="2"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R75" reversible="false">
+           <!-- 1 H 1 HO_2 -> 1 O_2 1 H_2  -->
+   <listOfReactants>
+    <speciesReference species="S9" stoichiometry="1"/>
+    <speciesReference species="S11" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S8" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R74" reversible="false">
+           <!-- 1 H 1 HO_2 -> 1 O 1 H_2O  -->
+   <listOfReactants>
+    <speciesReference species="S9" stoichiometry="1"/>
+    <speciesReference species="S11" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S12" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R73" reversible="false">
+           <!-- 1 O 1 H_2 -> 1 H 1 OH  -->
+   <listOfReactants>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S8" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S9" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R72" reversible="false">
+           <!-- 1 O 1 OH -> 1 O_2 1 H  -->
+   <listOfReactants>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S9" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R71" reversible="false">
+           <!-- 1 O 1 HO_2 -> 1 O_2 1 OH  -->
+   <listOfReactants>
+    <speciesReference species="S11" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R70" reversible="false">
+           <!-- 1 O 1 H_2O_2 -> 1 OH 1 HO_2  -->
+   <listOfReactants>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S13" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S11" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R69" reversible="false">
+           <!-- 2 OH -> 1 O 1 H_2O  -->
+   <listOfReactants>
+    <speciesReference species="S10" stoichiometry="2"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S12" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R68" reversible="false">
+           <!-- 1 M 2 OH -> 1 M 1 H_2O_2  -->
+   <listOfReactants>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="2"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S13" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R67" reversible="false">
+           <!-- 1 O_3 1 OH -> 1 O_2 1 HO_2  -->
+   <listOfReactants>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S4" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S11" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R66" reversible="false">
+           <!-- 1 H_2 1 OH -> 1 H 1 H_2O  -->
+   <listOfReactants>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S8" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S12" stoichiometry="1"/>
+    <speciesReference species="S9" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R65" reversible="false">
+           <!-- 1 OH 1 HO_2 -> 1 O_2 1 H_2O  -->
+   <listOfReactants>
+    <speciesReference species="S11" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S12" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R64" reversible="false">
+           <!-- 1 OH 1 H_2O_2 -> 1 HO_2 1 H_2O  -->
+   <listOfReactants>
+    <speciesReference species="S13" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S12" stoichiometry="1"/>
+    <speciesReference species="S11" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R63" reversible="false">
+           <!-- 1 OH 1 CO -> 1 H 1 CO_2  -->
+   <listOfReactants>
+    <speciesReference species="S15" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S9" stoichiometry="1"/>
+    <speciesReference species="S14" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R62" reversible="false">
+           <!-- 1 O_3 1 HO_2 -> 1 OH 2 O_2  -->
+   <listOfReactants>
+    <speciesReference species="S11" stoichiometry="1"/>
+    <speciesReference species="S4" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="2"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R61" reversible="false">
+           <!-- 2 HO_2 -> 1 O_2 1 H_2O_2  -->
+   <listOfReactants>
+    <speciesReference species="S11" stoichiometry="2"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S13" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R60" reversible="false">
+           <!-- 1 M 2 HO_2 -> 1 M 1 O_2 1 H_2O_2  -->
+   <listOfReactants>
+    <speciesReference species="S11" stoichiometry="2"/>
+    <speciesReference species="S2" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S13" stoichiometry="1"/>
+    <speciesReference species="S2" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R59" reversible="false">
+           <!-- 1 N_2 -> 2 N  -->
+   <listOfReactants>
+    <speciesReference species="S16" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S17" stoichiometry="2"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R58" reversible="false">
+           <!-- 1 N_2 -> 2 N(^2D)  -->
+   <listOfReactants>
+    <speciesReference species="S16" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S18" stoichiometry="2"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R57" reversible="false">
+           <!-- 1 hv 1 NO -> 1 O 1 N  -->
+   <listOfReactants>
+    <speciesReference species="S1" stoichiometry="1"/>
+    <speciesReference species="S19" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S17" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R56" reversible="false">
+           <!-- 1 hv 1 NO_2 -> 1 O 1 NO  -->
+   <listOfReactants>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S19" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R55" reversible="false">
+           <!-- 1 hv 1 NO_3 -> 1 O 1 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S21" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R54" reversible="false">
+           <!-- 1 hv 1 NO_3 -> 1 O_2 1 NO  -->
+   <listOfReactants>
+    <speciesReference species="S1" stoichiometry="1"/>
+    <speciesReference species="S21" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S19" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R53" reversible="false">
+           <!-- 1 hv 1 N_2O -> 1 O(^1D) 1 N_2  -->
+   <listOfReactants>
+    <speciesReference species="S1" stoichiometry="1"/>
+    <speciesReference species="S22" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S7" stoichiometry="1"/>
+    <speciesReference species="S16" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R52" reversible="false">
+           <!-- 1 hv 1 N_2O_5 -> 1 NO_2 1 NO_3  -->
+   <listOfReactants>
+    <speciesReference species="S23" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S21" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R51" reversible="false">
+           <!-- 1 hv 1 HNO_2 -> 1 OH 1 NO  -->
+   <listOfReactants>
+    <speciesReference species="S24" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S19" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R50" reversible="false">
+           <!-- 1 hv 1 HNO_3 -> 1 OH 1 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S25" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R49" reversible="false">
+           <!-- 1 hv 1 HO_2NO_2 -> 1 HO_2 1 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S1" stoichiometry="1"/>
+    <speciesReference species="S26" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S11" stoichiometry="1"/>
+    <speciesReference species="S20" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R48" reversible="false">
+           <!-- 1 O_2 1 N -> 1 O 1 NO  -->
+   <listOfReactants>
+    <speciesReference species="S17" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S19" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R47" reversible="false">
+           <!-- 1 O_3 1 N -> 1 O_2 1 NO  -->
+   <listOfReactants>
+    <speciesReference species="S17" stoichiometry="1"/>
+    <speciesReference species="S4" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S19" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R46" reversible="false">
+           <!-- 1 OH 1 N -> 1 H 1 NO  -->
+   <listOfReactants>
+    <speciesReference species="S17" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S19" stoichiometry="1"/>
+    <speciesReference species="S9" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R45" reversible="false">
+           <!-- 1 HO_2 1 N -> 1 OH 1 NO  -->
+   <listOfReactants>
+    <speciesReference species="S11" stoichiometry="1"/>
+    <speciesReference species="S17" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S19" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R44" reversible="false">
+           <!-- 1 N 1 NO -> 1 O 1 N_2  -->
+   <listOfReactants>
+    <speciesReference species="S17" stoichiometry="1"/>
+    <speciesReference species="S19" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S16" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R43" reversible="false">
+           <!-- 1 N 1 NO_2 -> 1 O 1 N_2O  -->
+   <listOfReactants>
+    <speciesReference species="S17" stoichiometry="1"/>
+    <speciesReference species="S20" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S22" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R42" reversible="false">
+           <!-- 1 O 1 N(^2D) -> 1 O 1 N  -->
+   <listOfReactants>
+    <speciesReference species="S18" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S17" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R41" reversible="false">
+           <!-- 1 CO_2 1 N(^2D) -> 1 CO 1 NO  -->
+   <listOfReactants>
+    <speciesReference species="S14" stoichiometry="1"/>
+    <speciesReference species="S18" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S15" stoichiometry="1"/>
+    <speciesReference species="S19" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R40" reversible="false">
+           <!-- 1 N_2 1 N(^2D) -> 1 N_2 1 N  -->
+   <listOfReactants>
+    <speciesReference species="S18" stoichiometry="1"/>
+    <speciesReference species="S16" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S17" stoichiometry="1"/>
+    <speciesReference species="S16" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R39" reversible="false">
+           <!-- 1 N(^2D) 1 NO -> 1 O 1 N_2  -->
+   <listOfReactants>
+    <speciesReference species="S18" stoichiometry="1"/>
+    <speciesReference species="S19" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S16" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R38" reversible="false">
+           <!-- 1 M 1 O 1 NO -> 1 M 1 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S19" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S20" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R37" reversible="false">
+           <!-- 1 O 1 NO_2 -> 1 O_2 1 NO  -->
+   <listOfReactants>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S20" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S19" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R36" reversible="false">
+           <!-- 1 M 1 O 1 NO_2 -> 1 M 1 NO_3  -->
+   <listOfReactants>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S2" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S21" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R35" reversible="false">
+           <!-- 1 O 1 NO_3 -> 1 O_2 1 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S21" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R34" reversible="false">
+           <!-- 1 O 1 HO_2NO_2 -> 1 O_2 1 OH 1 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S26" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S20" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R33" reversible="false">
+           <!-- 1 O(^1D) 1 N_2 -> 1 O 1 N_2  -->
+   <listOfReactants>
+    <speciesReference species="S7" stoichiometry="1"/>
+    <speciesReference species="S16" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S16" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R32" reversible="false">
+           <!-- 1 M 1 O(^1D) 1 N_2 -> 1 M 1 N_2O  -->
+   <listOfReactants>
+    <speciesReference species="S16" stoichiometry="1"/>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S7" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S22" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R31" reversible="false">
+           <!-- 1 O(^1D) 1 N_2O -> 2 NO  -->
+   <listOfReactants>
+    <speciesReference species="S22" stoichiometry="1"/>
+    <speciesReference species="S7" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S19" stoichiometry="2"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R30" reversible="false">
+           <!-- 1 O(^1D) 1 N_2O -> 1 O_2 1 N_2  -->
+   <listOfReactants>
+    <speciesReference species="S7" stoichiometry="1"/>
+    <speciesReference species="S22" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S16" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R29" reversible="false">
+           <!-- 1 O_3 1 NO -> 1 O_2 1 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S19" stoichiometry="1"/>
+    <speciesReference species="S4" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R28" reversible="false">
+           <!-- 1 HO_2 1 NO -> 1 OH 1 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S11" stoichiometry="1"/>
+    <speciesReference species="S19" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R27" reversible="false">
+           <!-- 1 NO 1 NO_3 -> 2 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S21" stoichiometry="1"/>
+    <speciesReference species="S19" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S20" stoichiometry="2"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R26" reversible="false">
+           <!-- 1 H 1 NO_2 -> 1 OH 1 NO  -->
+   <listOfReactants>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S9" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S19" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R25" reversible="false">
+           <!-- 1 H 1 NO_3 -> 1 OH 1 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S9" stoichiometry="1"/>
+    <speciesReference species="S21" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S20" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R24" reversible="false">
+           <!-- 1 M 1 OH 1 NO -> 1 M 1 HNO_2  -->
+   <listOfReactants>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S19" stoichiometry="1"/>
+    <speciesReference species="S2" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S24" stoichiometry="1"/>
+    <speciesReference species="S2" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R23" reversible="false">
+           <!-- 1 M 1 OH 1 NO_2 -> 1 M 1 HNO_3  -->
+   <listOfReactants>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S25" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R22" reversible="false">
+           <!-- 1 OH 1 NO_3 -> 1 HO_2 1 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S21" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S11" stoichiometry="1"/>
+    <speciesReference species="S20" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R21" reversible="false">
+           <!-- 1 OH 1 HNO_2 -> 1 H_2O 1 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S24" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S12" stoichiometry="1"/>
+    <speciesReference species="S20" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R20" reversible="false">
+           <!-- 1 OH 1 HNO_3 -> 1 H_2O 1 NO_3  -->
+   <listOfReactants>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S25" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S21" stoichiometry="1"/>
+    <speciesReference species="S12" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R19" reversible="false">
+           <!-- 1 OH 1 HO_2NO_2 -> 1 O_2 1 H_2O 1 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S10" stoichiometry="1"/>
+    <speciesReference species="S26" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S12" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R18" reversible="false">
+           <!-- 1 M 1 HO_2 1 NO_2 -> 1 M 1 HO_2NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S11" stoichiometry="1"/>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S2" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S26" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R17" reversible="false">
+           <!-- 1 HO_2 1 NO_3 -> 1 O_2 1 HNO_3  -->
+   <listOfReactants>
+    <speciesReference species="S21" stoichiometry="1"/>
+    <speciesReference species="S11" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S25" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R16" reversible="false">
+           <!-- 1 O_3 1 NO_2 -> 1 O_2 1 NO_3  -->
+   <listOfReactants>
+    <speciesReference species="S4" stoichiometry="1"/>
+    <speciesReference species="S20" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S21" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R15" reversible="false">
+           <!-- 1 M 1 NO_2 1 NO_3 -> 1 M 1 N_2O_5  -->
+   <listOfReactants>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S2" stoichiometry="1"/>
+    <speciesReference species="S21" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S23" stoichiometry="1"/>
+    <speciesReference species="S2" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R14" reversible="false">
+           <!-- 1 NO_2 1 NO_3 -> 1 O_2 1 NO 1 NO_2  -->
+   <listOfReactants>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S21" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S19" stoichiometry="1"/>
+    <speciesReference species="S20" stoichiometry="1"/>
+    <speciesReference species="S5" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R13" reversible="false">
+           <!-- 1 hv 1 O -> 1 e 1 O^+  -->
+   <listOfReactants>
+    <speciesReference species="S6" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S27" stoichiometry="1"/>
+    <speciesReference species="S3" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R12" reversible="false">
+           <!-- 1 hv 1 O_2 -> 1 e 1 O_2^+  -->
+   <listOfReactants>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S28" stoichiometry="1"/>
+    <speciesReference species="S3" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R11" reversible="false">
+           <!-- 1 hv 1 CO_2 -> 1 e 1 CO_2^+  -->
+   <listOfReactants>
+    <speciesReference species="S14" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S29" stoichiometry="1"/>
+    <speciesReference species="S3" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R10" reversible="false">
+           <!-- 1 hv 1 CO_2 -> 1 e 1 CO 1 O^+  -->
+   <listOfReactants>
+    <speciesReference species="S14" stoichiometry="1"/>
+    <speciesReference species="S1" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S3" stoichiometry="1"/>
+    <speciesReference species="S27" stoichiometry="1"/>
+    <speciesReference species="S15" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R9" reversible="false">
+           <!-- 1 e 1 O_2^+ -> 2 O  -->
+   <listOfReactants>
+    <speciesReference species="S28" stoichiometry="1"/>
+    <speciesReference species="S3" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S6" stoichiometry="2"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R8" reversible="false">
+           <!-- 1 e 1 CO_2^+ -> 1 O 1 CO  -->
+   <listOfReactants>
+    <speciesReference species="S3" stoichiometry="1"/>
+    <speciesReference species="S29" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S15" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R7" reversible="false">
+           <!-- 1 CO_2 1 O^+ -> 1 CO 1 O_2^+  -->
+   <listOfReactants>
+    <speciesReference species="S27" stoichiometry="1"/>
+    <speciesReference species="S14" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S28" stoichiometry="1"/>
+    <speciesReference species="S15" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R6" reversible="false">
+           <!-- 1 O 1 CO_2^+ -> 1 CO 1 O_2^+  -->
+   <listOfReactants>
+    <speciesReference species="S29" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S15" stoichiometry="1"/>
+    <speciesReference species="S28" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R5" reversible="false">
+           <!-- 1 O 1 CO_2^+ -> 1 CO_2 1 O^+  -->
+   <listOfReactants>
+    <speciesReference species="S29" stoichiometry="1"/>
+    <speciesReference species="S6" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S14" stoichiometry="1"/>
+    <speciesReference species="S27" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R4" reversible="false">
+           <!-- 1 H_2 1 CO_2^+ -> 1 H 1 CO_2H^+  -->
+   <listOfReactants>
+    <speciesReference species="S8" stoichiometry="1"/>
+    <speciesReference species="S29" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S30" stoichiometry="1"/>
+    <speciesReference species="S9" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R3" reversible="false">
+           <!-- 1 e 1 CO_2H^+ -> 1 H 1 CO_2  -->
+   <listOfReactants>
+    <speciesReference species="S3" stoichiometry="1"/>
+    <speciesReference species="S30" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S9" stoichiometry="1"/>
+    <speciesReference species="S14" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R2" reversible="false">
+           <!-- 1 HO_2 1 grain -> 1 (HO_2)_grain  -->
+   <listOfReactants>
+    <speciesReference species="S11" stoichiometry="1"/>
+    <speciesReference species="S32" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S31" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+  <reaction id="R1" reversible="false">
+           <!-- 1 OH 1 (HO_2)_grain -> 1 O_2 1 H_2O 1 grain  -->
+   <listOfReactants>
+    <speciesReference species="S31" stoichiometry="1"/>
+    <speciesReference species="S10" stoichiometry="1"/>
+   </listOfReactants>
+   <listOfProducts>
+    <speciesReference species="S5" stoichiometry="1"/>
+    <speciesReference species="S12" stoichiometry="1"/>
+    <speciesReference species="S32" stoichiometry="1"/>
+   </listOfProducts>
+  </reaction>
+ </listOfReactions>
+</model>
+</sbml>
